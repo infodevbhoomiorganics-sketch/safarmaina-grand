@@ -9,8 +9,104 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WaterfallRouteImport } from './routes/waterfall'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as RoomsRouteImport } from './routes/rooms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PoolRouteImport } from './routes/pool'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ExperiencesRouteImport } from './routes/experiences'
+import { Route as DiningRouteImport } from './routes/dining'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CancellationRouteImport } from './routes/cancellation'
+import { Route as BookingRouteImport } from './routes/booking'
+import { Route as AttractionsRouteImport } from './routes/attractions'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WaterfallRoute = WaterfallRouteImport.update({
+  id: '/waterfall',
+  path: '/waterfall',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoomsRoute = RoomsRouteImport.update({
+  id: '/rooms',
+  path: '/rooms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoolRoute = PoolRouteImport.update({
+  id: '/pool',
+  path: '/pool',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperiencesRoute = ExperiencesRouteImport.update({
+  id: '/experiences',
+  path: '/experiences',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiningRoute = DiningRouteImport.update({
+  id: '/dining',
+  path: '/dining',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CancellationRoute = CancellationRouteImport.update({
+  id: '/cancellation',
+  path: '/cancellation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingRoute = BookingRouteImport.update({
+  id: '/booking',
+  path: '/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AttractionsRoute = AttractionsRouteImport.update({
+  id: '/attractions',
+  path: '/attractions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +115,256 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/attractions': typeof AttractionsRoute
+  '/booking': typeof BookingRoute
+  '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
+  '/dining': typeof DiningRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/pool': typeof PoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/rooms': typeof RoomsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/waterfall': typeof WaterfallRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/attractions': typeof AttractionsRoute
+  '/booking': typeof BookingRoute
+  '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
+  '/dining': typeof DiningRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/pool': typeof PoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/rooms': typeof RoomsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/waterfall': typeof WaterfallRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/attractions': typeof AttractionsRoute
+  '/booking': typeof BookingRoute
+  '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
+  '/dining': typeof DiningRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/pool': typeof PoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/rooms': typeof RoomsRoute
+  '/sitemap': typeof SitemapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/waterfall': typeof WaterfallRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/attractions'
+    | '/booking'
+    | '/cancellation'
+    | '/contact'
+    | '/dining'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/pool'
+    | '/privacy'
+    | '/rooms'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/waterfall'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/attractions'
+    | '/booking'
+    | '/cancellation'
+    | '/contact'
+    | '/dining'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/pool'
+    | '/privacy'
+    | '/rooms'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/waterfall'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/attractions'
+    | '/booking'
+    | '/cancellation'
+    | '/contact'
+    | '/dining'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/pool'
+    | '/privacy'
+    | '/rooms'
+    | '/sitemap'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/waterfall'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AttractionsRoute: typeof AttractionsRoute
+  BookingRoute: typeof BookingRoute
+  CancellationRoute: typeof CancellationRoute
+  ContactRoute: typeof ContactRoute
+  DiningRoute: typeof DiningRoute
+  ExperiencesRoute: typeof ExperiencesRoute
+  FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
+  PoolRoute: typeof PoolRoute
+  PrivacyRoute: typeof PrivacyRoute
+  RoomsRoute: typeof RoomsRoute
+  SitemapRoute: typeof SitemapRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
+  WaterfallRoute: typeof WaterfallRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/waterfall': {
+      id: '/waterfall'
+      path: '/waterfall'
+      fullPath: '/waterfall'
+      preLoaderRoute: typeof WaterfallRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rooms': {
+      id: '/rooms'
+      path: '/rooms'
+      fullPath: '/rooms'
+      preLoaderRoute: typeof RoomsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pool': {
+      id: '/pool'
+      path: '/pool'
+      fullPath: '/pool'
+      preLoaderRoute: typeof PoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dining': {
+      id: '/dining'
+      path: '/dining'
+      fullPath: '/dining'
+      preLoaderRoute: typeof DiningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cancellation': {
+      id: '/cancellation'
+      path: '/cancellation'
+      fullPath: '/cancellation'
+      preLoaderRoute: typeof CancellationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/booking': {
+      id: '/booking'
+      path: '/booking'
+      fullPath: '/booking'
+      preLoaderRoute: typeof BookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/attractions': {
+      id: '/attractions'
+      path: '/attractions'
+      fullPath: '/attractions'
+      preLoaderRoute: typeof AttractionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +377,23 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AttractionsRoute: AttractionsRoute,
+  BookingRoute: BookingRoute,
+  CancellationRoute: CancellationRoute,
+  ContactRoute: ContactRoute,
+  DiningRoute: DiningRoute,
+  ExperiencesRoute: ExperiencesRoute,
+  FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
+  PoolRoute: PoolRoute,
+  PrivacyRoute: PrivacyRoute,
+  RoomsRoute: RoomsRoute,
+  SitemapRoute: SitemapRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
+  WaterfallRoute: WaterfallRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
