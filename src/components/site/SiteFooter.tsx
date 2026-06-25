@@ -19,7 +19,7 @@ export function SiteFooter() {
             A quiet luxury retreat carved into the pines of Garkhal, where the brook sings and the mountains hold the sky.
           </p>
           <div className="mt-6 flex gap-3">
-            <a href="#" aria-label="Instagram" className="h-10 w-10 glass rounded-full flex items-center justify-center hover:bg-gold/20 transition"><Instagram className="h-4 w-4" /></a>
+            <a href="https://www.instagram.com/safarmaina_kasauli/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-10 w-10 glass rounded-full flex items-center justify-center hover:bg-gold/20 transition"><Instagram className="h-4 w-4" /></a>
             <a href="#" aria-label="Facebook" className="h-10 w-10 glass rounded-full flex items-center justify-center hover:bg-gold/20 transition"><Facebook className="h-4 w-4" /></a>
             <a href="mailto:stay@safarmaina.com" aria-label="Email" className="h-10 w-10 glass rounded-full flex items-center justify-center hover:bg-gold/20 transition"><Mail className="h-4 w-4" /></a>
           </div>
